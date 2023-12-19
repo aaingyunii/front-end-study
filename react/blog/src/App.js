@@ -1,33 +1,62 @@
+/* eslint-disable */
+
 import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react';
 
 function App() {
-  let posts = '고기고기';
+  
+  let [titles , setTitle] = useState(
+    ["패딩 추천","겨울 상의 추천","코트 추천"]
+    );
 
-  function 함수(){
-    return 100;
-  }
+  let [like, setLike] = useState(0);
 
   return (
     <div className="App">
       {/* navbar 생성 */}
       <div className="black-nav" style={ { color : 'wheat', fontSize : '30px'}} >
-        개발 blog
+        예시 blog
       </div>
 
-      {/* 데이터 바인딩 예시
-      <img src={ logo } />
-      <h4>{ posts }</h4>
-      <h4>{ 함수() }</h4> */}
+      <button onClick={ () => {
+        let copy = [...titles];
+        copy[0] = '반팔추천';
+
+        setTitle(copy)  
+      }}>글 변경</button>
 
       {/* 리스트 생성 */}
       <div className="list">
-        <h3>{ posts } </h3>
+        <h3>{ titles[0] }
+        <span onClick={ () => { setLike(like + 1)}}>👍</span> { like } </h3>
         <p>12월 18일 발행</p>
-        <hr/>
       </div>
 
+      <div className="list">
+        <h3>{ titles[1] } </h3>
+        <p>12월 19일 발행</p>
+      </div>
+
+      <div className="list">
+        <h3>{ titles[2] } </h3>
+        <p>12월 19일 발행</p>
+      </div>
+
+      <Modal/>
+
     </div>
+
+  );
+}
+
+function Modal(){
+  return(
+  <div className='modal'>
+    <h4>{ } 상세 내용</h4>
+    <p>날짜 : </p>
+    <p>내용</p>
+</div>
   );
 }
 
