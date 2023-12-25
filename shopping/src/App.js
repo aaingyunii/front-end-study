@@ -6,8 +6,8 @@ import Background from './Components/Background';
 function App() {
   return (
     <div className="App">
-        <HeaderNav></HeaderNav>
-        <Background></Background>
+        <HeaderNav/>
+        <Background/>
     </div>
   );
 }

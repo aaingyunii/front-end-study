@@ -4,7 +4,7 @@ import { Button } from "react-bootstrap";
 function Background(){
     return(
         <div className="background">
-            <h1>ShowUwanna 사이트</h1>
+            <h1>쇼핑몰 사이트</h1>
             <p>
                 당신이 원하는 것, 그것을 찾을 수 있다.
             </p>
