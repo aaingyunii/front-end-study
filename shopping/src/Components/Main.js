@@ -1,16 +1,14 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import Background from './Background';
 
-const Main = (props) => {
-	return (
-		<>
-			<h3>안녕하세요. 메인페이지 입니다.</h3>
-			<ul>
-				<Link to="/product/1"><li>1번상품</li></Link>
-				<Link to="/product/2"><li>2번상품</li></Link>
-			</ul>
-		</>
-	);
-};
+function Main() {
+    return (
+        <>
+            <Background />
+            <h1>====================상품 리스트====================</h1>
+            <h1>====================상품 리스트====================</h1>
+            <h1>====================상품 리스트====================</h1>
+        </>
+    );
+}
 
 export default Main;

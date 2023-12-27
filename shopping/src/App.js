@@ -1,21 +1,23 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import HeaderNav from './Components/HeaderNav';
-import Background from './Components/Background';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import LogIn from './Components/LogIn';
 import Main from './Components/Main';
-import Login from './Components/Login';
+import Cart from './Components/Cart';
+import SignUp from './Components/SignUp';
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        <HeaderNav/>
+        <HeaderNav />
         <Routes>
-          <Route path='/' element={<Main/>}></Route>
-          <Route path='/login' element={<Login/>}></Route>
+          <Route path="/" element={<Main />} />
+          <Route path="/login" element={<LogIn />} />
+          <Route path='/signup' element={<SignUp/>}/>
+          <Route path="/cart" element={<Cart />} />
         </Routes>
-        <Background/>
       </BrowserRouter>
     </div>
   );
