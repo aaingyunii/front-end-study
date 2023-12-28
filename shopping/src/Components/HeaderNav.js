@@ -26,9 +26,6 @@ function HeaderNav() {
                             <Button variant="outlined"><HomeOutlinedIcon /></Button>
                         </Link>
 
-                        {/* <Button variant="outlined"><CategoryOutlinedIcon /></Button> */}
-                    </Nav>
-                    <Nav className='d-flex justify-content-center align-items-center me-auto'>
                         <Button variant="outlined"> <SearchIcon /></Button>
                         {/* d-flex -> display:flex; 가로정렬 */}
                         <Form className="d-flex">
@@ -39,7 +36,9 @@ function HeaderNav() {
                                 style={{ width: '15rem' }}
                             />
                         </Form>
+                        {/* <Button variant="outlined"><CategoryOutlinedIcon /></Button> */}
                     </Nav>
+                    
                     <Nav className='ml-auto'>
                         {/* 장바구니 버튼 */}
                         <Link to="/cart" className="nav-link">
